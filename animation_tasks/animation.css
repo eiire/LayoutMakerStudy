@@ -1,0 +1,38 @@
+.animation {
+    width: 150px;
+    height: 150px;
+    background-color: #f00;
+    animation: anime 6s infinite;
+    animation-fill-mode: forwards;
+    transition: background-color 500ms;
+}
+
+@keyframes anime {
+    from {
+        transform: translate(0, 0);
+    }
+    16% {
+        transform: translateX(150px);
+    }
+    32% {
+        transform: translate(150px, 150px);
+        animation-timing-function: ease-out;
+    }
+    48%, 64% {
+        transform: translate(150px, 150px) rotate(145deg) scale(2);
+    }
+    80% {
+        transform: translate(150px, 150px);
+    }
+    90% {
+        transform: translateX(150px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+.animation:hover {
+    background-color: #ff0;
+    transition-timing-function: linear;
+}
