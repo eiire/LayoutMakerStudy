@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.greeting {
+    text-align: center;
+    border: red dashed 2px;
+    margin: 50px auto 0 auto;
+    padding: 25px;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 0 auto 15px auto;
+}
+
+.text {
+    margin: 0 auto 0 auto;
+    width: 80%;
+}
