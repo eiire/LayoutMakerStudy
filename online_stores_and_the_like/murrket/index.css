@@ -1,13 +1,21 @@
-.wrapper {
-    margin: 0 150px 0 150px;
+header {
+    font: bold 4em "Space Mono", monospace;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
+.content {
+    margin: 0 10% 0 10%;
+}
 
+/*CARDS*/
 .card {
     display: block;
     width: 100%;
+    margin: 0 1% 20px 1%;
     float: left;
-    transition: width .2s;
+    transition: width 0.5s;
 }
 
 @media only screen and (min-width: 450px) {
@@ -24,38 +32,30 @@
 
 @media only screen and (min-width: 1000px) {
     .card {
-        width: 25%;
+        width: 23%;
     }
 }
 
-.card {
-    display: block;
-    position: relative;
-    margin: 0 0px 20px 0;
-    text-decoration: none;
-    height: 100%;
-}
-
-.wrapper > .card > a {
+.content > .card > .info > a {
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
 }
 
-.wrapper > .card > a:hover {
+.content > .card > .info > a:hover {
     color: #e25c45;
 }
 
 
-.wrapper > .card > .img_container {
+.content > .card > .img_container {
     position: relative;
     padding-bottom: 100%; /* !!! */
     margin: 0 20px 0 20px;
     overflow: hidden;
 }
 
-.wrapper > .card > .img_container > img {
+.content > .card > .img_container > img {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -65,17 +65,13 @@
     margin: auto;
 }
 
-.wrapper > .card > .img_container > img:hover {
+.content > .card > .img_container > img:hover {
     opacity: 0.7;
 }
 
-
-input#display_swither:checked + .wrapper > .card {
-    width: 100%;
-}
-
-
+/*RATING IN CARDS*/
 .rating_wrapper {
+    float: left; /* ! */
     width: 105px;
 }
 
@@ -104,7 +100,68 @@ input#display_swither:checked + .wrapper > .card {
 }
 
 .rating:hover {
-    visibility: hidden;
+    z-index: -1;
     height: 20px;
     background: url("stars.png") 0 -20px;
 }
+/*END RATING*/
+
+.description {
+    display: block;
+    float: left;        /* [NOTE] The element becomes a block and inherits the width of the parent. */
+    text-align: justify;
+    height: 100px;
+    overflow: auto;     /* At the same time will align the block in line-by-line display mode */
+}
+
+.price {
+    clear: left;
+    color: #5a5a5a;
+    font: bold 2em "Space Mono", monospace;
+}
+
+.oldprice {
+    color: #888;
+    text-decoration: line-through;
+}
+
+
+/*END CARD*/
+
+/*SWITCHER*/
+input#display_swither {
+    float: right;
+}
+
+input#display_swither:checked + .content > .card {
+    margin-top: 5%;
+    width: 100%;
+}
+
+input#display_swither:checked + .content > .card > .img_container {
+    width: 15%;
+    position: relative;
+    float: left;
+    padding-bottom: 0;
+}
+
+input#display_swither:checked + .content > .card > .img_container > img {
+    position: relative;
+}
+
+input#display_swither:checked + .content > .card > .info {
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+/* !!! */
+input#display_swither:checked + .content > .card > .description {
+    height: auto;
+    width: auto;
+    float: initial;
+}
+
+input#display_swither:checked + .content > .card > .info {
+    width: 15%;
+}
+/*END SWITHER*/
