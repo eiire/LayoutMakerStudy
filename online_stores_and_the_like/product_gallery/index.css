@@ -1,0 +1,70 @@
+.container {
+    width: 70%;
+    overflow: hidden;
+    right: 1.8%;
+    position: relative;
+    margin: 5% auto;
+}
+
+.container_vegetables {
+    transition: 2s linear;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.vegetables {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    white-space: initial;
+}
+
+.img_container {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.description {
+    display:none;
+    margin-top:100%;
+    background:#f3f3f3;
+    height:max-content;
+    box-shadow:0 5px 5px rgba(0,0,0,0.3);
+}
+
+.img_container:hover + .description {
+    display:block;
+    position:absolute;
+    top:0;
+    width: 100%;
+    transform: translateY(-100%);
+}
+
+img {
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    position: absolute;
+}
+
+input {
+    display: none;
+}
+
+input[id="r2"]:checked ~ .container_vegetables {
+    transform: translateX(-75%);
+}
+
+input[id="r3"]:checked ~ .container_vegetables {
+    transform: translateX(-150%);
+}
+
+.scroll_container {
+    width: max-content;
+    margin: auto;
+}
+
+label {
+    cursor: pointer;
+}
