@@ -1,9 +1,9 @@
 .container {
+    position: relative;
     width: 70%;
     overflow: hidden;
-    right: 1.8%;
-    position: relative;
     margin: 5% auto;
+    padding: 0.5% 3% 10% 0.5%;
 }
 
 .container_vegetables {
@@ -12,40 +12,57 @@
     white-space: nowrap;
 }
 
-.vegetables {
+.vegetable {
     position: relative;
     display: inline-block;
     width: 25%;
     white-space: initial;
+    /*transform: translateX(-6px);*/
 }
 
 .img_container {
+    display: block;
     position: relative;
     padding-bottom: 100%;
 }
 
-.description {
-    display:none;
-    margin-top:100%;
-    background:#f3f3f3;
-    height:max-content;
-    box-shadow:0 5px 5px rgba(0,0,0,0.3);
-}
-
-.img_container:hover + .description {
-    display:block;
-    position:absolute;
-    top:0;
-    width: 100%;
-    transform: translateY(-100%);
-}
-
-img {
-    width: 85%;
+.img_container img {
+    width: 75%;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
     position: absolute;
+}
+
+.description {
+    display:none;
+    height: 150%;
+    position: absolute;
+    background:#f3f3f3;
+    margin: auto;
+    overflow: auto;
+    box-shadow:0 10px 10px rgba(0,0,0,0.6);
+}
+
+.desc_text {
+    padding: 2% 3% 0 3%;
+    text-align: justify;
+    position: relative;
+}
+
+.vegetable:hover > .description {
+    display:block;
+    position:absolute;
+    top:1%;
+    width: 110%;
+}
+
+.vegetable:hover > .img_container > img {
+    display:none;
+}
+
+.vegetable:hover ~ .vegetable {
+    z-index: -1;
 }
 
 input {
@@ -62,7 +79,16 @@ input[id="r3"]:checked ~ .container_vegetables {
 
 .scroll_container {
     width: max-content;
-    margin: auto;
+    margin: 5% auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll_container > label {
+    letter-spacing: 10px;
+    font: bold 1em "Space Mono", monospace;
 }
 
 label {
