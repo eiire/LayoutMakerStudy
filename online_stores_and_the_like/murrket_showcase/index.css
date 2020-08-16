@@ -1,0 +1,98 @@
+header {
+    font: bold 4em "Space Mono", monospace;
+    letter-spacing: 9px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+}
+
+.breed_cats {
+    width: 20%;
+    background: #d0d0d0;
+}
+
+.cards_cats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 100%;
+}
+
+.card_cat:nth-child(8n) {
+    flex-basis: 100%;
+}
+
+.card_cat:nth-child(8n) > .img_container {
+    padding-bottom: 32.333%;
+}
+
+.card_cat:nth-child(8n+2) {
+    flex-basis: 65.666%;
+}
+
+.card_cat:nth-child(8n+2) > .img_container {
+    padding-bottom: 50%;
+}
+
+.card_cat:nth-child(8n+6) {
+    flex-basis: 65.666%;
+}
+
+.card_cat:nth-child(8n+6) > .img_container {
+    padding-bottom: 50%;
+}
+
+.rating_cats {
+    width: 20%;
+    background: #d0d0d0;
+    align-self: flex-start;
+}
+
+.card_cat {
+    position: relative;
+    width: 32.3333%;
+    background: #888888;
+    margin: 0 0.5% 0.5% 0.5%;
+}
+
+.card_cat > .img_container {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.card_cat > .img_container > img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.card_cat > .description_wrapper {
+    display: none;
+    overflow: auto;
+}
+
+.card_cat:hover > .description_wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    bottom: 20%;
+    left: 0;
+    right: 20%;
+    background: rgba(68, 68, 68, 0.45);
+}
+
+.card_cat:hover > .description_wrapper > .desc {
+    font: bold 2em "Space Mono", monospace;
+    color: #d0d0d0;
+    margin: auto;
+}
