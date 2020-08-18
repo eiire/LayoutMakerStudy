@@ -10,6 +10,7 @@
 
     <div class="content">
         <div class="breed_cats">
+            <label for="All"> All </label>
             <label for="Crazy"> Crazy </label>
             <label for="Mysterious"> Mysterious </label>
             <label for="Angry"> Angry </label>
@@ -20,6 +21,7 @@
         <input type="radio" id="Mysterious" name="r1">
         <input type="radio" id="Angry" name="r1">
         <input type="radio" id="Stupid" name="r1">
+        <input type="radio" id="All" name="r1">
 
         <div class="cards_cats">
             <div class="card_cat Stupid">
@@ -33,9 +35,10 @@
                     </div>
                 </div>
             </div>
-            <div class="card_cat Mysterious">
+
+            <div class="card_cat Stupid">
                 <div class="img_container">
-                    <img src="img/a5c5512c7b2120977e02ac3de94a6931.jpg" alt="2">
+                    <img src="img/original-22513-1544075964-15.jpg" alt="6">
                 </div>
 
                 <div class="description_wrapper">
@@ -44,6 +47,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card_cat Crazy">
                 <div class="img_container">
                     <img src="img/e2bc95fe79b0853ccdd0f186da4d129f.jpg" alt="3">
@@ -79,9 +83,9 @@
                 </div>
             </div>
 
-            <div class="card_cat Stupid">
+            <div class="card_cat Mysterious">
                 <div class="img_container">
-                    <img src="img/original-22513-1544075964-15.jpg" alt="6">
+                    <img src="img/a5c5512c7b2120977e02ac3de94a6931.jpg" alt="2">
                 </div>
 
                 <div class="description_wrapper">
@@ -110,13 +114,44 @@
 
                 <div class="description_wrapper">
                     <div class="desc">
-                        FCAT 7
+                        FCAT 8
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="rating_cats">121212121</div>
+        <div class="rating_cats">
+            <span> Рейтинг </span>
+            <label for="sort_rating"> по убыванию </label>
+            <input type="checkbox" id="sort_rating">
+
+            <div class="rating_system">
+                <div class="nine">
+                    <div class="scale"></div>
+                    <div class="numb">9</div>
+                </div>
+                <span> Stupid </span>
+
+                <div class="ten">
+                    <div class="scale"></div>
+                    <div class="numb">10</div>
+                </div>
+                <span> Crazy </span>
+
+                <div class="four">
+                    <div class="scale"></div>
+                    <div class="numb">4</div>
+                </div>
+                <span> Angry </span>
+
+                <div class="eight">
+                    <div class="scale"></div>
+                    <div class="numb">8</div>
+                </div>
+                <span> Mysterious </span>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>

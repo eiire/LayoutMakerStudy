@@ -3,17 +3,26 @@ header {
     letter-spacing: 9px;
     text-align: center;
     text-transform: uppercase;
+    margin: 2%;
+}
+
+body {
+    background-color: #e5e5e5;
 }
 
 .content {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
 }
 
 .breed_cats {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    background: #d0d0d0;
+    width: 15%;
+    background: #ffffff;
+    border-radius: 5px;
 }
 
 .breed_cats > label {
@@ -21,18 +30,18 @@ header {
     align-items: center;
     height: 3%;
     font: 1em "Space Mono", monospace;
-    justify-content: center
+    justify-content: center;
 }
 
 .breed_cats > label:hover {
     color: #d0d0d0;
-    background: #444444;
+    background: #7a7a7a;
 }
 
 .cards_cats {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 55%;
     height: 100%;
 }
 
@@ -60,16 +69,10 @@ header {
     padding-bottom: 50%;
 }
 
-.rating_cats {
-    width: 20%;
-    background: #d0d0d0;
-    align-self: flex-start;
-}
-
 .card_cat {
     position: relative;
     width: 32.3333%;
-    background: #888888;
+    background: #ffffff;
     margin: 0 0.5% 0.5% 0.5%;
 }
 
@@ -116,6 +119,10 @@ header {
     display: none;
 }
 
+input[id="All"]:checked ~ .cards_cats {
+    opacity: 1;
+}
+
 input[id="Crazy"]:checked ~ .cards_cats > div:not(.Crazy) {
     opacity: 0.5;
 }
@@ -130,4 +137,158 @@ input[id="Angry"]:checked ~ .cards_cats > div:not(.Angry) {
 
 input[id="Stupid"]:checked ~ .cards_cats > div:not(.Stupid) {
     opacity: 0.5;
+}
+
+.rating_cats {
+    display: flex;
+    width: 15%;
+    background: #ffffff;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    padding: 1%;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+
+.rating_system {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-basis: 100%;
+}
+
+.rating_cats > span {
+    text-transform: uppercase;
+    color: #e25c45;
+    flex-basis: 100%;
+}
+
+.rating_cats .ten, .rating_cats .nine, .rating_cats .eight, .rating_cats .seven, .rating_cats .six,
+.rating_cats .five, .rating_cats .four, .rating_cats .three, .rating_cats .two, .rating_cats .one {
+    display: flex;
+    justify-content: space-between;
+    margin: 3%;
+    font: 1em "Space Mono", monospace;
+}
+
+.rating_system .scale {
+    padding-bottom: 3%;
+    border: 1px outset rgba(234, 234, 234, 0.23);
+}
+
+.rating_system .ten > .scale {
+    width: 50%;
+    background: rgb(66,233,66);
+    background: linear-gradient(90deg, rgba(66,233,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .nine > .scale {
+    width: 45%;
+    background: rgb(66,233,66);
+    background: linear-gradient(90deg, rgba(66,233,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .eight > .scale {
+    width: 40%;
+    background: rgb(233,226,66);
+    background: linear-gradient(90deg, rgba(233,226,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .seven > .scale {
+    width: 35%;
+    background: rgb(233,226,66);
+    background: linear-gradient(90deg, rgba(233,226,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .six > .scale {
+    width: 30%;
+    background: rgb(233,226,66);
+    background: linear-gradient(90deg, rgba(233,226,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .five > .scale {
+    width: 25%;
+    background: rgb(233,226,66);
+    background: linear-gradient(90deg, rgba(233,226,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .four > .scale {
+    width: 20%;
+    background: rgb(233,66,66);
+    background: linear-gradient(90deg, rgba(233,66,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .three > .scale {
+    width: 15%;
+    background: rgb(233,66,66);
+    background: linear-gradient(90deg, rgba(233,66,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .two > .scale {
+    width: 10%;
+    background: rgb(233,66,66);
+    background: linear-gradient(90deg, rgba(233,66,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .one > .scale {
+    width: 5%;
+    background: rgb(233,66,66);
+    background: linear-gradient(90deg, rgba(233,66,66,1) 44%, rgba(255,255,255,1) 100%);
+}
+
+.rating_system .numb {
+    font: bold 1.1em "Space Mono", monospace;
+}
+
+.rating_cats > input {
+    align-self: flex-end;
+}
+
+.rating_cats > input:checked + .rating_system .ten,
+.rating_cats > input:checked + .rating_system .ten + span {
+    order: 10;
+}
+
+.rating_cats > input:checked + .rating_system .nine,
+.rating_cats > input:checked + .rating_system .nine + span{
+    order: 9;
+}
+
+.rating_cats > input:checked + .rating_system .eight,
+.rating_cats > input:checked + .rating_system .eight + span{
+    order: 8;
+}
+
+.rating_cats > input:checked + .rating_system .seven,
+.rating_cats > input:checked + .rating_system .seven + span{
+    order: 7;
+}
+
+.rating_cats > input:checked + .rating_system .six,
+.rating_cats > input:checked + .rating_system .six + span{
+    order: 6;
+}
+
+.rating_cats > input:checked + .rating_system .five,
+.rating_cats > input:checked + .rating_system .five + span{
+    order: 5;
+}
+
+.rating_cats > input:checked + .rating_system .four,
+.rating_cats > input:checked + .rating_system .four + span {
+    order: 4;
+}
+
+.rating_cats > input:checked + .rating_system .three,
+.rating_cats > input:checked + .rating_system .three + span{
+    order: 3;
+}
+
+.rating_cats > input:checked + .rating_system .two,
+.rating_cats > input:checked + .rating_system .two + span{
+    order: 2;
+}
+
+.rating_cats > input:checked + .rating_system .one,
+.rating_cats > input:checked + .rating_system .one + span{
+    order: 1;
 }
