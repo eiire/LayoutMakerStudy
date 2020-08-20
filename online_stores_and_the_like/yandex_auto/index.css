@@ -1,31 +1,125 @@
-.content {
-    position: fixed;
+article.ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
     background: #efefef;
     width: 984px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1%;
-    top: 1%;
+    bottom: 18px;
+    top: 18px;
+    margin: auto;
+    height: max-content;
 }
 
 @media only screen and (max-width: 984px) {
-    .content {
-        width: 96.34%; /* = 948px */
-        left: 1.83%; /* = 18px */
-        transform: none;
+    article.ad {
+        position: absolute;
+        width: max-content;
+        right: 18px;
+        left: 18px;
     }
 }
 
 .logo {
     display: flex;
-    position: absolute;
+    align-items: center;
+    justify-content: center;
     width: 167px;
     height: 130px;
     background-image: url("img/Shape 16.png");
     background-size: 100% 100%;
-    right: 5%;
+    margin-left: 70%;
 }
 
-.logo > img {
-    margin: auto;
+.logo img {
+    margin: 10%;
+}
+
+section.example {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 643px;
+}
+
+.title {
+    font-size: 35px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.2;
+    text-align: left;
+}
+
+section.example > .review > .offroad_cars {
+    background-image: url("img/Offroad cars1.png");
+    width: 596px;
+    height: 125px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(255, 219, 74);
+    box-shadow: 0 1px 1px 0 rgba(255, 90, 0, 0.8);
+    position: relative;
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+
+.video {
+    position: relative;
+    margin-top: 5%;
+    width: 641px;
+    height: 361px;
+}
+
+.card_group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalogue_icon {
+    background-image: url("img/Catalogue icon.png");
+    position: relative;
+    width: 99px;
+}
+
+.card_desc {
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.2;
+    text-align: left;
+    width: 218px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 218px;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.card_name {
+    width: 218px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card img {
+    height: 84px;
 }
