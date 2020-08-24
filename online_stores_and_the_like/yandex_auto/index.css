@@ -1,4 +1,4 @@
-article.ad {
+.ad {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,9 +12,9 @@ article.ad {
 }
 
 @media only screen and (max-width: 984px) {
-    article.ad {
+    .ad {
         position: absolute;
-        width: max-content;
+        width: 948px;
         right: 18px;
         left: 18px;
     }
@@ -35,7 +35,7 @@ article.ad {
     margin: 10%;
 }
 
-section.example {
+section.short_ad {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -50,12 +50,13 @@ section.example {
 
 .title {
     font-size: 35px;
+    margin: 20px;
     font-family: "Arial", sans-serif;
     line-height: 1.2;
     text-align: left;
 }
 
-section.example > .review > .offroad_cars {
+section.short_ad > .review > .offroad_cars {
     background-image: url("img/Offroad cars1.png");
     width: 596px;
     height: 125px;
@@ -75,16 +76,59 @@ section.example > .review > .offroad_cars {
     margin: 10px;
 }
 
+.circle:hover {
+    background-color: rgba(255, 219, 74, 0.8);
+}
+
 .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin-top: 5%;
     width: 641px;
     height: 361px;
 }
 
+.video > .name {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: rgba(68, 68, 68, 0.48);
+    color: #d0d0d0;
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.2;
+}
+
+.video > .circle {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+}
+
+.video > .play:hover {
+    background-color: rgba(255, 219, 74, 0.8);
+}
+
+
 .card_group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 218px;
+    align-items: flex-start;
+    margin: 10px;
 }
 
 .catalogue_icon {
@@ -101,14 +145,6 @@ section.example > .review > .offroad_cars {
     width: 218px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 218px;
-    align-items: flex-start;
-    margin: 10px;
-}
-
 .card_name {
     width: 218px;
     font-size: 30px;
@@ -122,4 +158,31 @@ section.example > .review > .offroad_cars {
 
 .card img {
     height: 84px;
+}
+
+.agitation {
+    font-size: 24.778px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.2;
+    text-align: center;
+    margin: 10px;
+}
+
+.buttom {
+    display: flex;
+    border-radius: 8px;
+    background-color: rgb(221, 200, 77);
+    color: #282828;
+    width: 317px;
+    height: 70px;
+    font-size: 24.778px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.2;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttom:hover {
+    background: radial-gradient(circle, rgba(255,219,0,1) 72%, rgba(129,123,56,0.9248074229691877) 100%);
+    color: #000000;
 }
